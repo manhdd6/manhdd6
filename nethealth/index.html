@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>He thong QT-CLHT</title>
+    <link href="./assets/css/styles.css" rel="stylesheet"/>
+    <link href="./assets/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700"/>
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+    <script src="./assets/js/plugins/chart.js"></script>
+    <script src="./assets/js/plugins/chartjs-plugin-datalabels.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="./assets/img/logo-ct.png" alt="Logo">
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+            <img src="/image/menu.png" alt="Menu Icon">
+        </div>    
+        <div class="header__title">Hệ thống Quản trị chất lượng Hạ tầng</div>
+        <div class="header__account">
+            <img src="/image/login.png" alt="Account" class="header__account-img">
+            <div class="header__account-info">
+                <p>Xin chào, SonNH12@fpt.com</p>
+                <button onclick="logout()">Đăng xuất</button>
+            </div>
+        </div>
+    </div>
+    <div class="menu-icon" id="ico-menu">
+        <ul>
+            <li class="menu-item">
+                <a href="#"><img src="/image/dashboard.png" alt="Icon 1">Dashboard</a>
+            </li>
+            <li class="menu-item">
+                <a href="#"><img src="/image/quy mo.png" alt="Icon 1"> Quy mô Hạ tầng</a>
+                <ul class="submenu">
+                    <li class="submenu-item">
+                        <a href="#"><img src="/image/quy mo.png" alt="Icon 2"> Nội vi</a>
+                        <ul class="submenu">
+                            <li class="submenu-item">
+                                <a href="#"><img src="/image/quy mo.png" alt="Icon 3"> Đài trạm</a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="#"><img src="/image/quy mo.png" alt="Icon 3"> Thiết bị đài trạm</a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="#"><img src="/image/quy mo.png" alt="Icon 3"> Thiết bị Network</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="#"><img src="/image/quy mo.png" alt="Icon 2"> Ngoại vi</a>
+                        <ul class="submenu">
+                            <li class="submenu-item">
+                                <a href="#"><img src="/image/quy mo.png" alt="Icon 3"> Tuyến cáp RING</a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="#"><img src="/image/quy mo.png" alt="Icon 3"> Tuyến cáp PON</a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="#"><img src="/image/quy mo.png" alt="Icon 3"> Tập điểm</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="#"><img src="/image/quy mo.png" alt="Icon 2"> Mạng lõi</a>
+                        <ul class="submenu">
+                            <li class="submenu-item">
+                                <a href="#"><img src="/image/quy mo.png" alt="Icon 3"> Thiết bị Access</a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="#"><img src="/image/quy mo.png" alt="Icon 3"> Công suất Port</a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="#"><img src="/image/quy mo.png" alt="Icon 3"> Băng thông</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#"><img src="/image/quy mo.png" alt="Icon 1"> Năng lực Hạ tầng</a>
+                <ul class="submenu">
+                    <li class="submenu-item">
+                        <a href="#"><img src="/image/quy mo.png" alt="Icon 2"> Hiện trạng khai thác hạ tầng</a>
+                        <ul class="submenu">
+                            <li class="submenu-item">
+                                <a href="#"><img src="/image/quy mo.png" alt="Icon 3"> Tình trạng sử dụng công suất</a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="#"><img src="/image/quy mo.png" alt="Icon 3"> Tỷ lệ khai thác Port</a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="#"><img src="/image/quy mo.png" alt="Icon 3"> Tỷ lệ khai thác port PON</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="#"><img src="/image/quy mo.png" alt="Icon 2"> Chỉ số sức khỏe hạ tầng</a>
+                        <ul class="submenu">
+                            <li class="submenu-item">
+                                <a href="#"><img src="/image/quy mo.png" alt="Icon 3"> Công suất tập điểm</a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="#"><img src="/image/quy mo.png" alt="Icon 3"> Tỷ lệ sử dụng Bandwidth</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#"><img src="/image/quy mo.png" alt="Icon 1"> Phân tích dự báo</a>
+                <ul class="submenu">
+                    <li class="submenu-item">
+                        <a href="#"><img src="/image/quy mo.png" alt="Icon 2"> Dự báo</a>
+                        <ul class="submenu">
+                            <li class="submenu-item">
+                                <a href="#"><img src="/image/quy mo.png" alt="Icon 3"> Dự báo nội vi</a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="#"><img src="/image/quy mo.png" alt="Icon 3"> Dự báo ngoại vi</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="navigation">
+        <div class="navigation__item"><p></p></div>
+        <div class="navigation__item">
+            <p>Index/Dashboard</p>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="box">
+            <p class="box__number1">...</p>
+            <p class="box__unit1">Nguồn DC</p>
+            <p class="box__header1">Loading...</p>
+            <img src="/image/setup.png" alt="Setup" class="box__setup" onclick="openForm('infoForm')">
+        </div>
+        <div class="box">
+            <p class="box__number2">...</p>
+            <p class="box__unit2">Rectifier</p>
+            <p class="box__header2">Đang sử dụng</p>
+            <img src="/image/setup.png" alt="Setup" class="box__setup" onclick="openForm('infoForm')">
+        </div>
+        <div class="box">
+            <p class="box__number3">...</p>
+            <p class="box__unit3">Rectifier</p>
+            <p class="box__header3">Đáp ứng N+1</p>
+            <img src="/image/setup.png" alt="Setup" class="box__setup" onclick="openForm('infoForm')">
+        </div>
+        <div class="box">
+            <p class="box__number4">...</p>
+            <p class="box__unit4">Rectifier</p>
+            <p class="box__header4">Thừa</p>
+            <img src="/image/setup.png" alt="Setup" class="box__setup" onclick="openForm('infoForm')">
+        </div>
+        <div class="box">
+            <p class="box__number5">...</p>
+            <p class="box__unit5">Rectifier</p>
+            <p class="box__header5">Thiếu</p>
+            <img src="/image/setup.png" alt="Setup" class="box__setup" onclick="openForm('infoForm')">
+        </div>
+    </div>
+    <nav class="nav--tertiary">
+        <select name="cbxslt">
+            <option>-- Loại POP --</option>
+            <option value="metro">Metro</option>
+            <option value="building">Building</option>
+            <option value="pop">POP thường</option>
+            <option value="popplus">POP +</option>
+        </select>
+        <label>
+            <input type="radio" name="view" id="chart" checked> Biểu đồ
+        </label>
+        <label>
+            <input type="radio" name="view" id="data"> Bảng dữ liệu
+        </label>
+        <div class="gr-search">
+            <input type="text" class="input-search" placeholder="Tìm kiếm">
+            <button class="btn-search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+        </div>
+    </nav>
+    <div class="content">
+        <!-- Hiển thị table, Dashboard -->
+    </div>
+
+    <div class="container">
+        <!-- Form setup -->
+        <div class="form-popup" id="detailpwdcForm">
+            <div class="form-header" id="formHeader">
+                <h2>Danh sách chi tiết</h2>
+                <button class="close-btn" onclick="closeForm('detailpwdcForm')">×</button>
+            </div>
+            <form action="#" class="form-container">
+                <div class="tbldetailpwdc">
+                    <!-- Hiển thị table detail -->
+                </div>
+            </form>
+        </div>
+        <!-- Form  -->
+        <div class="frm1-popup" id="infoForm">
+            <div class="form-header" id="formHeader">
+                <h2>Thông tin nguồn</h2>
+                <button class="close-btn" onclick="closeForm('infoForm')">x</button>
+            </div>
+            <form action="#" class="frm1-container">
+                <div class="tblpwdc">
+                    <!-- Hiển thị table rendertablePwDc -->
+                </div> 
+            </form>
+        </div>
+    </div>
+    <div class="footer"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/js/menu.js"></script>
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>
